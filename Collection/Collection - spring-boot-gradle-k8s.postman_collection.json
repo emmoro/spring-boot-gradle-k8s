@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "751add12-25b5-4ef3-a09f-5b332e90c415",
+		"name": "Collection - spring-boot-gradle-k8s",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Console",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nintendo Entertainment System\",\r\n    \"releaseYear\": 1985\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30163/api/consoles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"consoles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Consoles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30163/api/consoles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"consoles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Id Console",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"name\" : \"Teste\",\r\n    \"lastName\": \"last\",\r\n    \"birthDate\": \"06/10/1990\",\r\n    \"identificationDocument\" : \"122.222.111-00\",\r\n    \"createDate\" : \"06/10/2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30163/api/consoles/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"consoles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Super Mario Bros.\",\r\n    \"releaseYear\": 1985,\r\n    \"console\" :{\r\n        \"id\": 4,\r\n        \"name\": \"Nintendo Entertainment System\",\r\n        \"releaseYear\": 1985\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30163/api/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30163/api/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Consoel by id By Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30163/api/consoles/4/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30163",
+					"path": [
+						"api",
+						"consoles",
+						"4",
+						"games"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
