@@ -33,7 +33,7 @@ public class ConsoleController {
     }
 
     @RequestMapping(value = Path.CONSOLES, method = RequestMethod.POST)
-    public ResponseEntity<ConsoleResponse> getConsoleById(@RequestBody ConsoleResponse consoleResponse) {
+    public ResponseEntity<ConsoleResponse> saveConsole(@RequestBody ConsoleResponse consoleResponse) {
         log.info("Save new ConsoleResponse: " + consoleResponse);
         return ResponseEntity.ok(consoleService.saveConsole(consoleResponse));
     }
