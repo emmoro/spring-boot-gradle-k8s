@@ -28,13 +28,13 @@ public class GameController {
     }
 
     @RequestMapping(value = Path.CONSOLE_GAMES, method = RequestMethod.GET)
-    public ResponseEntity<List<GameResponse>> getAllGames(@PathVariable("id") Long id) {
+    public ResponseEntity<List<GameResponse>> getAllGamesByConsole(@PathVariable("id") Long id) {
         log.info("Get game By Id: " + id);
         return ResponseEntity.ok(gameService.getAllGamesByConsole(id));
     }
 
     @RequestMapping(value = Path.GAMES, method = RequestMethod.POST)
-    public ResponseEntity<GameWithConsoleResponse> getConsoleById(@RequestBody GameWithConsoleResponse gameWithConsoleResponse) {
+    public ResponseEntity<GameWithConsoleResponse> saveGame(@RequestBody GameWithConsoleResponse gameWithConsoleResponse) {
         log.info("Save new GameWithConsoleResponse: " + gameWithConsoleResponse);
         return ResponseEntity.ok(gameService.saveGame(gameWithConsoleResponse));
     }
